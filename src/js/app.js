@@ -34,6 +34,9 @@ function render(variables = {}) {
   if (variables.linkedin === null) variables.linkedin = "";
   if (variables.instagram === null) variables.instagram = "";
   if (variables.github === null) variables.github = "";
+  if (variables.city === null) variables.city = "Select City";
+  if (variables.country === null) variables.country = "Select Country";
+  if (variables.role === null) variables.role = "Select a Role";
   // reset the website body with the new html output
   document.querySelector("#widget_content").innerHTML = `<div class="widget">
             ${cover}
@@ -65,15 +68,15 @@ window.onload = function() {
     // social media bar position (position-left or position-right)
     socialMediaPosition: "position-left",
     // social media usernames
-    twitter: "",
-    github: "",
-    linkedin: "",
-    instagram: "",
-    name: "Lucy",
-    lastName: "Trump",
-    role: "Select a role",
-    country: "Select Country",
-    city: "Select City"
+    twitter: null,
+    github: null,
+    linkedin: null,
+    instagram: null,
+    name: null,
+    lastName: null,
+    role: null,
+    country: null,
+    city: null
   };
   render(window.variables); // render the card for the first time
 
